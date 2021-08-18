@@ -1,24 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int sign(int x) {
-    int ans=0;
-    if(x>0) {
-        ans=1;
-    }
-    else if(x<0) {
-        ans=-1;
-    }
-    return ans;
+int sign(int a) {
+    int b = a>>31;
+    
+    if(b)return 0;
+    
+    else return 1;
 }
-
-int main() {
+// 0 for positive
+// 1 for negative
+void main(void) {
     
-    int x, y;
+    int a= 10;
     
-    scanf("%d",&x);
+    printf("%d ",sign(a));
     
-    int ans = sign(x);
-    
-    printf("%d\n",ans);
     return 0;
 }
